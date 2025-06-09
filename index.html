@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Munch - We Tell You What to Eat</title>
+    <meta name="description" content="Stop staring at menus. Snap a photo, get instant recommendations that match your goals. No counting, no math, just results.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fb;
+            color: #2d3748;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="%234CAF50"/><text x="100" y="120" text-anchor="middle" font-size="80" fill="white">🍴</text></svg>') no-repeat center;
+            background-size: contain;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #718096;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-text {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #4a5568;
+        }
+        
+        .download-section {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 4rem;
+        }
+        
+        .download-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .store-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        
+        .store-button.android {
+            background: #4CAF50;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            color: #4CAF50;
+        }
+        
+        .made-with {
+            color: #718096;
+            font-size: 0.875rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.25rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+            }
+            
+            .store-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"></div>
+            <h1>Happy Munch</h1>
+            <p class="tagline">We tell you what to eat!</p>
+        </header>
+        
+        <p class="hero-text">
+            Stop the menu paralysis. Snap a photo of any menu and get instant recommendations that match your fitness goals. No counting, no math, just results.
+        </p>
+        
+        <div class="download-section">
+            <h2 class="download-title">Ready to eat smarter?</h2>
+            <p>Download Happy Munch and let us handle the menu math.</p>
+            <div class="download-buttons">
+                <a href="#" class="store-button ios" id="ios-button">
+                    <span>📱</span>
+                    <span>Download for iPhone</span>
+                </a>
+                <a href="#" class="store-button android" id="android-button">
+                    <span>🤖</span>
+                    <span>Get it on Android</span>
+                </a>
+            </div>
+            <p style="margin-top: 1rem; color: #718096; font-size: 0.875rem;">Coming soon to both app stores!</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📸</div>
+                <h3>Snap Any Menu</h3>
+                <p>Point, shoot, done. Works with any menu, anywhere.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Get Instant Recs</h3>
+                <p>Personalized suggestions that match YOUR goals.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💪</div>
+                <h3>Crush Your Goals</h3>
+                <p>Whether it's losing, gaining, or maintaining - we got you.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="/support.html">Support</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="mailto:support@happy-munch.com">Contact</a>
+        </div>
+        <p>&copy; 2025 CoHabby LLC. All rights reserved.</p>
+        <p class="made-with">Made with ❤️ for the developer's mom</p>
+    </footer>
+    
+    <script>
+        // Update these links when app store URLs are available
+        document.getElementById('ios-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Coming soon to the App Store!');
+        });
+        
+        document.getElementById('android-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Coming soon to Google Play!');
+        });
+    </script>
+</body>
+</html>
