@@ -20,6 +20,7 @@ Public website for Happy Munch app - includes landing page, privacy policy, and 
 ## URLs
 
 Once deployed:
+
 - Landing: https://happy-munch.com
 - Privacy: https://happy-munch.com/privacy.html
 - Support: https://happy-munch.com/support.html
