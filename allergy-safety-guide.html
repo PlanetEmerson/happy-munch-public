@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergy Safety Guide - Happy Munch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fb;
+            color: #2d3748;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+            color: #1a1a1a;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .warning-box h3 {
+            color: #856404;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box p, .warning-box li {
+            color: #856404;
+        }
+        
+        .emergency-box {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .emergency-box h3 {
+            color: #c00;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .emergency-box p, .emergency-box li {
+            color: #900;
+        }
+        
+        .info-box {
+            background: #e6f7ff;
+            border: 2px solid #91d5ff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-box h3 {
+            color: #096dd9;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        
+        .info-box p, .info-box li {
+            color: #0050b3;
+        }
+        
+        .question-list {
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .question-list li {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+        
+        .contact-section {
+            background: #f8f9fb;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        
+        .toc {
+            background: #f8f9fb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .toc ul {
+            margin-left: 1.5rem;
+        }
+        
+        .toc a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        strong {
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Happy Munch</a>
+        
+        <h1>🛡️ Allergy Safety Guide</h1>
+        <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Your comprehensive guide to dining safely with food allergies and intolerances</p>
+        
+        <div class="warning-box">
+            <h3>⚠️ Important Safety Notice</h3>
+            <p><strong>Happy Munch is a technology tool designed to help you navigate menus, but it is NOT a substitute for direct communication with restaurant staff about your allergies.</strong></p>
+            <p>Always verify all food ingredients and preparation methods directly with your server or the restaurant manager before ordering.</p>
+        </div>
+        
+        <div class="toc">
+            <h3>📋 Contents</h3>
+            <ul>
+                <li><a href="#best-practices">Best Practices for Restaurant Dining</a></li>
+                <li><a href="#what-to-ask">What to Ask Your Server</a></li>
+                <li><a href="#understanding-tech">Understanding Our Technology</a></li>
+                <li><a href="#emergency">Emergency Preparedness</a></li>
+                <li><a href="#hidden-allergens">Common Hidden Allergens</a></li>
+                <li><a href="#cross-contamination">Cross-Contamination Risks</a></li>
+                <li><a href="#travel-tips">International Travel Tips</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="best-practices">🍽️ Best Practices for Restaurant Dining</h2>
+        
+        <h3>Before You Go</h3>
+        <ul>
+            <li><strong>Call ahead:</strong> Contact the restaurant during off-peak hours to discuss your allergies</li>
+            <li><strong>Check online:</strong> Many restaurants post allergen menus on their websites</li>
+            <li><strong>Choose wisely:</strong> Select restaurants with good allergy protocols and reviews</li>
+            <li><strong>Time it right:</strong> Avoid peak hours when kitchens are busiest</li>
+            <li><strong>Bring backup:</strong> Always carry safe snacks in case options are limited</li>
+        </ul>
+        
+        <h3>At the Restaurant</h3>
+        <ul>
+            <li><strong>Speak up immediately:</strong> Inform your server about allergies before looking at the menu</li>
+            <li><strong>Be specific:</strong> Name each allergen clearly - don't just say "I have allergies"</li>
+            <li><strong>Ask for the manager:</strong> Request to speak with the chef or manager for serious allergies</li>
+            <li><strong>Confirm understanding:</strong> Have staff repeat back your allergies to ensure clarity</li>
+            <li><strong>Get it in writing:</strong> Ask servers to note allergies on your order ticket</li>
+        </ul>
+        
+        <h3>When Ordering</h3>
+        <ul>
+            <li><strong>Keep it simple:</strong> Choose dishes with fewer ingredients when possible</li>
+            <li><strong>Avoid risky items:</strong> Fried foods, sauces, and desserts often contain hidden allergens</li>
+            <li><strong>Request modifications:</strong> Ask for sauces and dressings on the side</li>
+            <li><strong>Double-check:</strong> Verify your order when it arrives at the table</li>
+            <li><strong>Trust your instincts:</strong> If something seems wrong, don't eat it</li>
+        </ul>
+        
+        <h2 id="what-to-ask">💬 What to Ask Your Server</h2>
+        
+        <div class="question-list">
+            <h3>Essential Questions for Every Visit</h3>
+            <ul>
+                <li>"I have a severe allergy to [allergen]. Can you help me find safe options?"</li>
+                <li>"Does this dish contain any [allergen] or [allergen]-derived ingredients?"</li>
+                <li>"How is this dish prepared? Is it cooked in the same oil as [allergen]?"</li>
+                <li>"Are there any hidden ingredients like [allergen] in the marinade, sauce, or seasoning?"</li>
+                <li>"Can this dish be prepared without [allergen] and with clean utensils?"</li>
+                <li>"Is there risk of cross-contamination with [allergen] in the kitchen?"</li>
+            </ul>
+        </div>
+        
+        <h3>For Specific Allergens</h3>
+        
+        <p><strong>🥜 Nut Allergies:</strong></p>
+        <ul>
+            <li>"Is this cooked in peanut oil or any nut oils?"</li>
+            <li>"Are nuts used as garnish on any dishes at this station?"</li>
+            <li>"Do you use almond flour or nut-based ingredients in breading?"</li>
+        </ul>
+        
+        <p><strong>🥛 Dairy Allergies:</strong></p>
+        <ul>
+            <li>"Is butter used in cooking this dish?"</li>
+            <li>"Does the bread contain milk or butter?"</li>
+            <li>"Are there any hidden dairy ingredients like casein or whey?"</li>
+        </ul>
+        
+        <p><strong>🌾 Gluten Allergies/Celiac:</strong></p>
+        <ul>
+            <li>"Do you have a dedicated gluten-free preparation area?"</li>
+            <li>"Is the fryer used for breaded items?"</li>
+            <li>"Is soy sauce or flour used in the marinade?"</li>
+        </ul>
+        
+        <p><strong>🦐 Shellfish Allergies:</strong></p>
+        <ul>
+            <li>"Is this cooked on the same grill as shellfish?"</li>
+            <li>"Do you use oyster sauce or fish sauce in this dish?"</li>
+            <li>"Is there any risk of shellfish in the cooking oil?"</li>
+        </ul>
+        
+        <h2 id="understanding-tech">🤖 Understanding Our Technology</h2>
+        
+        <div class="info-box">
+            <h3>How Happy Munch Helps You</h3>
+            <p>Our app uses advanced machine learning to:</p>
+            <ul>
+                <li>Analyze menu photos and identify potential dishes</li>
+                <li>Flag items that commonly contain your allergens</li>
+                <li>Suggest alternatives based on typical ingredients</li>
+                <li>Translate foreign menus to help you communicate</li>
+            </ul>
+        </div>
+        
+        <h3>Technology Limitations You Should Know</h3>
+        <ul>
+            <li><strong>Cannot detect hidden ingredients:</strong> We can't see marinades, cooking oils, or cross-contamination</li>
+            <li><strong>Based on common recipes:</strong> Restaurants may use unique ingredients we can't predict</li>
+            <li><strong>Photo quality matters:</strong> Blurry or partial photos reduce accuracy</li>
+            <li><strong>Menu descriptions vary:</strong> Not all ingredients are listed on menus</li>
+            <li><strong>Preparation changes:</strong> Kitchen practices can vary day to day</li>
+        </ul>
+        
+        <h3>Best Ways to Use Happy Munch</h3>
+        <ul>
+            <li>✅ As a starting point to identify potentially safe dishes</li>
+            <li>✅ To understand menu items in foreign languages</li>
+            <li>✅ To track your successful meal choices</li>
+            <li>✅ To prepare questions for restaurant staff</li>
+            <li>❌ As your only source of allergen information</li>
+            <li>❌ To make final decisions without verification</li>
+        </ul>
+        
+        <h2 id="emergency">🚨 Emergency Preparedness</h2>
+        
+        <div class="emergency-box">
+            <h3>Always Be Prepared</h3>
+            <ul>
+                <li><strong>Carry medications:</strong> Keep epinephrine auto-injectors accessible at all times</li>
+                <li><strong>Check expiration dates:</strong> Replace medications before they expire</li>
+                <li><strong>Inform companions:</strong> Ensure dining partners know about your allergies</li>
+                <li><strong>Wear identification:</strong> Consider medical alert jewelry</li>
+                <li><strong>Know the signs:</strong> Recognize symptoms of allergic reactions</li>
+            </ul>
+        </div>
+        
+        <h3>Signs of Allergic Reaction</h3>
+        <p><strong>Mild to Moderate:</strong></p>
+        <ul>
+            <li>Hives, itching, or skin redness</li>
+            <li>Tingling or itching in the mouth</li>
+            <li>Mild swelling of lips, face, or eyes</li>
+            <li>Stomach cramps or nausea</li>
+        </ul>
+        
+        <p><strong>Severe (Anaphylaxis) - Call 911 Immediately:</strong></p>
+        <ul>
+            <li>Difficulty breathing or swallowing</li>
+            <li>Swelling of throat or tongue</li>
+            <li>Rapid pulse or dizziness</li>
+            <li>Loss of consciousness</li>
+            <li>Severe whole-body reaction</li>
+        </ul>
+        
+        <h3>Emergency Action Plan</h3>
+        <ol>
+            <li><strong>Use epinephrine immediately</strong> if prescribed</li>
+            <li><strong>Call 911</strong> - even if symptoms improve</li>
+            <li><strong>Lie flat</strong> (elevate legs if possible)</li>
+            <li><strong>Remove trigger</strong> if still in contact</li>
+            <li><strong>Stay calm</strong> and await medical help</li>
+        </ol>
+        
+        <h2 id="hidden-allergens">🔍 Common Hidden Allergens</h2>
+        
+        <h3>Surprising Sources to Watch For</h3>
+        
+        <p><strong>Milk/Dairy hidden in:</strong></p>
+        <ul>
+            <li>Bread and baked goods (even "egg bread")</li>
+            <li>Processed meats and hot dogs</li>
+            <li>Margarine (may contain whey)</li>
+            <li>Dark chocolate</li>
+            <li>Wine and beer (casein used in processing)</li>
+        </ul>
+        
+        <p><strong>Eggs hidden in:</strong></p>
+        <ul>
+            <li>Pasta (especially fresh pasta)</li>
+            <li>Mayonnaise-based sauces</li>
+            <li>Meat substitutes</li>
+            <li>Glazes on baked goods</li>
+            <li>Some coffee drinks (foam)</li>
+        </ul>
+        
+        <p><strong>Nuts hidden in:</strong></p>
+        <ul>
+            <li>Pesto and other sauces</li>
+            <li>Barbecue sauces</li>
+            <li>Salad dressings</li>
+            <li>Ethnic cuisines (especially Asian and Mediterranean)</li>
+            <li>Alcoholic beverages (nut-flavored liqueurs)</li>
+        </ul>
+        
+        <p><strong>Gluten hidden in:</strong></p>
+        <ul>
+            <li>Soy sauce and teriyaki sauce</li>
+            <li>Soup bases and broths</li>
+            <li>Imitation seafood</li>
+            <li>Seasoning blends</li>
+            <li>Beer and malt beverages</li>
+        </ul>
+        
+        <h2 id="cross-contamination">⚡ Cross-Contamination Risks</h2>
+        
+        <h3>High-Risk Scenarios</h3>
+        <ul>
+            <li><strong>Shared fryers:</strong> Oil used for multiple items</li>
+            <li><strong>Grills and griddles:</strong> Same surface for all proteins</li>
+            <li><strong>Cutting boards:</strong> Used for multiple ingredients</li>
+            <li><strong>Utensils:</strong> Spoons moved between dishes</li>
+            <li><strong>Steam tables:</strong> Splashing between containers</li>
+        </ul>
+        
+        <h3>Safer Options</h3>
+        <ul>
+            <li>Dishes made to order (not pre-prepared)</li>
+            <li>Steamed or boiled items</li>
+            <li>Fresh salads (verify dressing)</li>
+            <li>Whole fruits</li>
+            <li>Packaged items with labels</li>
+        </ul>
+        
+        <h2 id="travel-tips">✈️ International Travel Tips</h2>
+        
+        <h3>Before You Travel</h3>
+        <ul>
+            <li><strong>Learn key phrases:</strong> "I have an allergy to..." in local language</li>
+            <li><strong>Get allergy cards:</strong> Printed cards explaining your allergies in local language</li>
+            <li><strong>Research local cuisine:</strong> Understand common ingredients in destination</li>
+            <li><strong>Pack safe foods:</strong> Bring non-perishable backups</li>
+            <li><strong>Locate hospitals:</strong> Know where to get emergency care</li>
+        </ul>
+        
+        <h3>Using Happy Munch Abroad</h3>
+        <ul>
+            <li>Take clear photos of menus for translation</li>
+            <li>Use the app to identify unfamiliar dishes</li>
+            <li>Screenshot translations to show restaurant staff</li>
+            <li>Remember: Ingredients may differ by region</li>
+        </ul>
+        
+        <h3>Key Phrases in Multiple Languages</h3>
+        <p><strong>English:</strong> "I have a severe allergy to [allergen]. Can you help me?"</p>
+        <p><strong>Spanish:</strong> "Tengo una alergia grave a [alérgeno]. ¿Puede ayudarme?"</p>
+        <p><strong>French:</strong> "J'ai une allergie grave à [allergène]. Pouvez-vous m'aider?"</p>
+        <p><strong>Italian:</strong> "Ho una grave allergia a [allergene]. Può aiutarmi?"</p>
+        <p><strong>Chinese:</strong> "我对[过敏原]严重过敏。你能帮我吗？"</p>
+        <p><strong>Japanese:</strong> "私は[アレルゲン]に重度のアレルギーがあります。"</p>
+        
+        <div class="contact-section">
+            <h2>📞 Need More Help?</h2>
+            <p>We're here to support your safe dining journey:</p>
+            <p>
+                <strong>Happy Munch Support</strong><br>
+                Email: support@happy-munch.com<br>
+                Website: <a href="/support.html">happy-munch.com/support</a>
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong>Report an Issue:</strong><br>
+                If you experience any allergy-related incidents or have safety concerns, please contact us immediately at safety@happy-munch.com
+            </p>
+            <p style="margin-top: 1rem;">
+                <strong>Emergency Resources:</strong><br>
+                • Emergency Services: 911 (US/Canada)<br>
+                • Poison Control: 1-800-222-1222<br>
+                • <a href="https://www.foodallergy.org">Food Allergy Research & Education (FARE)</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
