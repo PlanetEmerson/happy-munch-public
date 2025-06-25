@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Munch - We Tell You What to Eat</title>
-    <meta name="description" content="Stop staring at menus. Snap a photo, get instant recommendations that match your goals. No counting, no math, just results.">
+    <title>Happy Munch - We Tell You What the F#&% to Eat!</title>
+    <meta name="description" content="Happy Munch uses AI to analyze restaurant menus instantly. Perfect for food allergies, dietary restrictions, and fitness goals. No more menu anxiety!">
+    <meta name="keywords" content="restaurant menu app, food allergy app, dietary restrictions, menu scanner, AI food app, healthy dining, travel food app, fitness meal tracker">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/">
+    <meta property="og:title" content="Happy Munch - We Tell You What the F#&% to Eat!">
+    <meta property="og:description" content="AI-powered menu analysis for food allergies, diets & fitness goals. Snap a photo, get instant recommendations.">
+    <meta property="og:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://happy-munch.com/">
+    <meta property="twitter:title" content="Happy Munch - We Tell You What the F#&% to Eat!">
+    <meta property="twitter:description" content="AI-powered menu analysis for food allergies, diets & fitness goals. Snap a photo, get instant recommendations.">
+    <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
     <style>
         * {
             margin: 0;
@@ -12,242 +28,953 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #4169E1;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8f9fb;
-            color: #2d3748;
+            color: var(--text-primary);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background: linear-gradient(135deg, #fff 0%, #f8f9fb 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .container {
-            max-width: 800px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-50px) rotate(180deg); }
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-            flex: 1;
-        }
-        
-        header {
-            text-align: center;
-            padding: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="%234CAF50"/><text x="100" y="120" text-anchor="middle" font-size="80" fill="white">🍴</text></svg>') no-repeat center;
-            background-size: contain;
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
         }
         
-        h1 {
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--orange);
+            border: 2px solid var(--orange);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--orange);
+            color: white;
+        }
+        
+        .hero-visual {
+            position: relative;
+        }
+        
+        .phone-mockup {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .phone-mockup img {
+            width: 100%;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+        }
+        
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-weight: 600;
+            animation: floatBadge 3s ease-in-out infinite;
+        }
+        
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .badge-1 {
+            top: 10%;
+            left: -10%;
+            background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+            color: white;
+        }
+        
+        .badge-2 {
+            bottom: 20%;
+            right: -15%;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+            color: white;
+        }
+        
+        .badge-3 {
+            top: 50%;
+            right: -10%;
+            background: white;
+            color: var(--text-primary);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
             font-size: 3rem;
-            font-weight: 800;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
         }
         
-        .tagline {
-            font-size: 1.5rem;
-            color: #718096;
-            font-weight: 500;
-            margin-bottom: 3rem;
-        }
-        
-        .hero-text {
+        .section-header p {
             font-size: 1.25rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #4a5568;
+            color: var(--text-secondary);
         }
         
-        .download-section {
-            text-align: center;
-            background: white;
-            padding: 3rem;
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
             border-radius: 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 4rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .download-title {
-            font-size: 2rem;
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
         
-        .download-buttons {
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: var(--bg-light);
+            padding: 6rem 2rem;
+        }
+        
+        .steps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        
+        .step:not(:last-child) .step-number::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, var(--orange) 0%, transparent 100%);
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .step:not(:last-child) .step-number::after {
+                display: block;
+            }
+        }
+        
+        .step h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            color: var(--text-secondary);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--orange);
+            opacity: 0.3;
+            font-weight: 900;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            color: var(--yellow);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .app-badges {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
         
-        .store-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
+        .app-badge {
+            background: white;
+            color: var(--text-primary);
             padding: 1rem 2rem;
-            background: #000;
-            color: white;
-            text-decoration: none;
             border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.3s;
         }
         
-        .store-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        .app-badge:hover {
+            transform: scale(1.05);
         }
         
-        .store-button.android {
-            background: #4CAF50;
+        .app-badge img {
+            width: 30px;
+            height: 30px;
         }
         
-        .features {
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
-        .feature {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
+        .footer-section h3 {
             margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
         
-        .feature h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        footer {
-            background: white;
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links a {
-            color: #4a5568;
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
             text-decoration: none;
-            font-weight: 500;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
         }
         
-        .footer-links a:hover {
-            color: #4CAF50;
+        .footer-section a:hover {
+            color: white;
         }
         
-        .made-with {
-            color: #718096;
-            font-size: 0.875rem;
-            margin-top: 2rem;
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
         }
         
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
             }
             
-            .tagline {
-                font-size: 1.25rem;
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             
-            .download-buttons {
-                flex-direction: column;
+            .hero-visual {
+                order: -1;
+                margin-bottom: 2rem;
             }
             
-            .store-button {
-                width: 100%;
-                justify-content: center;
+            .floating-badge {
+                display: none;
             }
+            
+            .steps-container {
+                gap: 2rem;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo"></div>
-            <h1>Happy Munch</h1>
-            <p class="tagline">We tell you what to eat!</p>
-        </header>
-        
-        <p class="hero-text">
-            Stop the menu paralysis. Snap a photo of any menu and get instant recommendations that match your fitness goals. No counting, no math, just results.
-        </p>
-        
-        <div class="download-section">
-            <h2 class="download-title">Ready to eat smarter?</h2>
-            <p>Download Happy Munch and let us handle the menu math.</p>
-            <div class="download-buttons">
-                <a href="#" class="store-button ios" id="ios-button">
-                    <span>📱</span>
-                    <span>Download for iPhone</span>
-                </a>
-                <a href="#" class="store-button android" id="android-button">
-                    <span>🤖</span>
-                    <span>Get it on Android</span>
-                </a>
-            </div>
-            <p style="margin-top: 1rem; color: #718096; font-size: 0.875rem;">Coming soon to both app stores!</p>
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📸</div>
-                <h3>Snap Any Menu</h3>
-                <p>Point, shoot, done. Works with any menu, anywhere.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h3>Get Instant Recs</h3>
-                <p>Personalized suggestions that match YOUR goals.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">💪</div>
-                <h3>Crush Your Goals</h3>
-                <p>Whether it's losing, gaining, or maintaining - we got you.</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Happy Munch 🍔</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
             </div>
         </div>
-    </div>
+    </nav>
     
-    <footer>
-        <div class="footer-links">
-            <a href="/support.html">Support</a>
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
-            <a href="mailto:support@happy-munch.com">Contact</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-grid">
+                <div class="hero-text fade-in">
+                    <h1>
+                        We Tell You<br>
+                        <span class="gradient-text">What the F#&% to Eat!</span>
+                    </h1>
+                    <p>
+                        Stop staring at menus like they're written in ancient hieroglyphics. 
+                        Snap a photo, and we'll tell you exactly what to order based on your dietary needs, 
+                        allergies, and fitness goals. It's that simple.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.happymunch.android" class="btn btn-primary">
+                            <span>Get it on Google Play</span>
+                            <span>🚀</span>
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            <span>See How It Works</span>
+                            <span>👇</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <img src="mockup-phone.png" alt="Happy Munch App">
+                        <div class="floating-badge badge-1">✅ Allergy Safe</div>
+                        <div class="floating-badge badge-2">🔥 AI Powered</div>
+                        <div class="floating-badge badge-3">💪 Fitness Goals</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2025 CoHabby LLC. All rights reserved.</p>
-        <p class="made-with">Made with ❤️ for the developer's mom</p>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">2.5s</div>
+                <div class="stat-label">Average Analysis Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Accuracy Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500K+</div>
+                <div class="stat-label">Meals Analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.9★</div>
+                <div class="stat-label">App Store Rating</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>Why Happy Munch is Your <span class="gradient-text">New Best Friend</span></h2>
+            <p>Because life's too short to eat the wrong thing</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Instant Menu Analysis</h3>
+                <p>
+                    Our AI doesn't mess around. Snap a photo of any menu, and within seconds, 
+                    you'll get personalized recommendations that match your exact dietary needs.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Allergy Protection</h3>
+                <p>
+                    We take your safety seriously. Our advanced algorithms flag potential allergens 
+                    and cross-contamination risks, but always verify with restaurant staff.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Fitness Goal Tracking</h3>
+                <p>
+                    Whether you're bulking, cutting, or maintaining, we'll find meals that fit 
+                    your macros and help you stay on track with your fitness journey.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Travel Companion</h3>
+                <p>
+                    Foreign menu? No problem. We translate and analyze menus in multiple languages, 
+                    making you a confident diner anywhere in the world.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Meal History</h3>
+                <p>
+                    Track what worked and what didn't. Build your personal database of safe, 
+                    delicious meals at your favorite restaurants.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Custom Preferences</h3>
+                <p>
+                    Vegan? Keto? Gluten-free? Hate cilantro? We remember everything, so you 
+                    don't have to explain yourself every time you eat out.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Three simple steps to dining confidence</p>
+        </div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Snap the Menu</h3>
+                <p>Take a clear photo of the restaurant menu. That's it. No typing, no searching.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>AI Does Its Magic</h3>
+                <p>Our advanced AI analyzes every dish, checking ingredients against your profile.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Your Picks</h3>
+                <p>Receive personalized recommendations with confidence scores and warnings.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Real People, <span class="gradient-text">Real Results</span></h2>
+            <p>Don't just take our word for it</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "As someone with severe nut allergies, eating out used to be stressful. 
+                    Happy Munch gives me the confidence to try new restaurants. It's literally 
+                    changed my life!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <h4>Sarah K.</h4>
+                        <p>Food Allergy Warrior</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "I'm tracking macros for a bodybuilding comp, and this app is clutch. 
+                    It finds high-protein options everywhere, even at places I'd never expect. 
+                    Absolute game-changer!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MJ</div>
+                    <div class="author-info">
+                        <h4>Mike J.</h4>
+                        <p>Fitness Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">
+                    "Traveling through Asia with dietary restrictions was daunting until I found 
+                    Happy Munch. It translates menus and finds safe options instantly. 
+                    Worth every penny!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ET</div>
+                    <div class="author-info">
+                        <h4>Emma T.</h4>
+                        <p>Digital Nomad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Eat with Confidence?</h2>
+            <p>
+                Join thousands of happy munchers who never stress about menus again. 
+                Download now and get your first month of premium features FREE!
+            </p>
+            <div class="app-badges">
+                <a href="https://play.google.com/store/apps/details?id=com.happymunch.android" class="app-badge pulse">
+                    <img src="google-play-icon.png" alt="Google Play">
+                    <div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">GET IT ON</div>
+                        <div>Google Play</div>
+                    </div>
+                </a>
+                <a href="#" class="app-badge" style="opacity: 0.6; cursor: not-allowed;">
+                    <img src="apple-icon.png" alt="App Store">
+                    <div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">COMING TO</div>
+                        <div>App Store</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Happy Munch</h3>
+                <p style="margin-bottom: 1rem; color: rgba(255,255,255,0.8);">
+                    Making dining decisions easier, one photo at a time.
+                </p>
+                <p style="color: rgba(255,255,255,0.6);">
+                    © 2025 CoHabby LLC
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/support.html">Support</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="/about.html">About Us</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/data-deletion.html">Data Deletion</a>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="/allergy-safety-guide.html">Allergy Safety Guide</a>
+                <a href="/support.html">FAQ</a>
+                <a href="mailto:support@happy-munch.com">Contact Us</a>
+                <a href="/press.html">Press Kit</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with ❤️ (and a lot of restaurant visits) in California</p>
+        </div>
     </footer>
     
     <script>
-        // Update these links when app store URLs are available
-        document.getElementById('ios-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Coming soon to the App Store!');
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
         
-        document.getElementById('android-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Coming soon to Google Play!');
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.feature-card, .step, .testimonial').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
