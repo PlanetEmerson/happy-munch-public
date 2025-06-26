@@ -3,129 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allergy Safety Guide - Happy Munch</title>
+    <title>Food Allergy App Guide | Restaurant Allergy Safety | Happy Munch</title>
+    <meta name="description" content="Complete guide to dining safely with food allergies. Learn how to use our food allergy app for gluten-free, nut-free, dairy-free dining. Restaurant allergy detection tips and emergency protocols.">
+    <meta name="keywords" content="food allergy app, restaurant allergy guide, gluten free dining, nut allergy restaurant, dairy free restaurants, food allergy detection, celiac safe dining, allergen scanner app, restaurant allergy safety, food intolerance app, cross contamination prevention, allergy emergency plan, shellfish allergy dining, egg free restaurants, vegan allergy app">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/allergy-safety-guide.html">
+    <meta property="og:title" content="Food Allergy Safety Guide - Happy Munch">
+    <meta property="og:description" content="Comprehensive guide to safe restaurant dining with food allergies. Tips, emergency protocols, and how to use our AI allergy detection app.">
+    <meta property="og:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://happy-munch.com/allergy-safety-guide.html">
+    <meta property="twitter:title" content="Food Allergy Safety Guide - Happy Munch">
+    <meta property="twitter:description" content="Comprehensive guide to safe restaurant dining with food allergies. Tips, emergency protocols, and how to use our AI allergy detection app.">
+    <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Complete Food Allergy Safety Guide for Restaurant Dining",
+        "description": "Comprehensive guide to dining safely with food allergies including gluten, nuts, dairy, shellfish. Emergency protocols and restaurant communication tips.",
+        "author": {
+            "@type": "Organization",
+            "name": "Happy Munch"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Happy Munch",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://happy-munch.com/assets/adaptive-icon1.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-26",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://happy-munch.com/allergy-safety-guide.html"
+        },
+        "keywords": "food allergies, restaurant safety, gluten free, nut allergy, dairy free, allergen detection, cross contamination, emergency preparedness"
+    }
+    </script>
+    
     <style>
+        /* Geist Font Face Declarations */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8f9fb;
-            color: #2d3748;
-            line-height: 1.8;
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem;
-            background: white;
+            padding: 6rem 2rem 2rem;
             min-height: 100vh;
         }
         
         .back-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             margin-bottom: 2rem;
-            color: #4CAF50;
+            color: var(--orange);
             text-decoration: none;
             font-weight: 600;
+            transition: all 0.3s;
         }
         
         .back-link:hover {
-            text-decoration: underline;
+            transform: translateX(-5px);
         }
         
         h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
             margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .intro-text {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.7;
         }
         
         h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
         }
         
         h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-            color: #555;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         p {
-            margin-bottom: 1rem;
-            color: #4a5568;
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
         
         ul {
             margin-left: 2rem;
-            margin-bottom: 1rem;
-            color: #4a5568;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
         }
         
         li {
-            margin-bottom: 0.5rem;
-            line-height: 1.7;
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
         }
         
         .warning-box {
-            background: #fff3cd;
+            background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%);
             border: 2px solid #ffeaa7;
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 16px;
+            padding: 2rem;
             margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
         
         .warning-box h3 {
             color: #856404;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .warning-box p, .warning-box li {
             color: #856404;
+            font-weight: 500;
         }
         
         .emergency-box {
-            background: #fee;
+            background: linear-gradient(135deg, #fee 0%, #fff5f5 100%);
             border: 2px solid #fcc;
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 16px;
+            padding: 2rem;
             margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
         
         .emergency-box h3 {
             color: #c00;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .emergency-box p, .emergency-box li {
             color: #900;
+            font-weight: 500;
         }
         
         .info-box {
-            background: #e6f7ff;
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
             border: 2px solid #91d5ff;
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 16px;
+            padding: 2rem;
             margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
         
         .info-box h3 {
             color: #096dd9;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .info-box p, .info-box li {
@@ -133,35 +338,65 @@
         }
         
         .question-list {
-            background: #f0f0f0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .question-list h3 {
+            margin-top: 0;
+            color: var(--text-primary);
         }
         
         .question-list li {
             font-weight: 500;
-            color: #333;
-            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
         }
         
         .contact-section {
-            background: #f8f9fb;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
+            background: var(--gradient);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 4rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .contact-section p {
+            color: rgba(255,255,255,0.95);
+        }
+        
+        .contact-section a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .contact-section strong {
+            color: white;
         }
         
         .toc {
-            background: #f8f9fb;
-            border-radius: 8px;
-            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 2rem;
             margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
         
         .toc h3 {
             margin-top: 0;
-            color: #333;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .toc ul {
@@ -169,26 +404,195 @@
         }
         
         .toc a {
-            color: #4CAF50;
+            color: var(--orange);
             text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
         }
         
         .toc a:hover {
+            color: var(--orange-dark);
             text-decoration: underline;
         }
         
         strong {
-            color: #333;
-            font-weight: 600;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+        
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 5rem 1rem 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .toc ul {
+                margin-left: 1rem;
+            }
+            
+            ul {
+                margin-left: 1.5rem;
+            }
+            
+            .warning-box, .emergency-box, .info-box, .question-list, .toc {
+                padding: 1.5rem;
+            }
+            
+            .contact-section {
+                padding: 2rem;
+            }
+        }
+        
+        /* Allergen Sections */
+        .allergen-section {
+            margin: 3rem 0;
+        }
+        
+        .allergen-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .allergen-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .allergen-card:hover {
+            border-color: var(--orange-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .allergen-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .allergen-card h4:first-child {
+            margin-top: 0;
+        }
+        
+        .allergen-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .allergen-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .allergen-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .allergen-card {
+                padding: 1.5rem;
+            }
+            
+            .allergen-title {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/adaptive-icon1.png" alt="Happy Munch">
+                Happy Munch
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
-        <a href="/" class="back-link">← Back to Happy Munch</a>
+        <a href="/" class="back-link">← Back to Home</a>
         
-        <h1>🛡️ Allergy Safety Guide</h1>
-        <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Your comprehensive guide to dining safely with food allergies and intolerances</p>
+        <h1>Complete <span class="gradient-text">Food Allergy Safety Guide</span></h1>
+        <p class="intro-text">Your comprehensive guide to dining safely with food allergies and intolerances. Learn how to navigate restaurants confidently with our AI-powered allergen detection app.</p>
         
         <div class="warning-box">
             <h3>⚠️ Important Safety Notice</h3>
@@ -281,6 +685,217 @@
             <li>"Do you use oyster sauce or fish sauce in this dish?"</li>
             <li>"Is there any risk of shellfish in the cooking oil?"</li>
         </ul>
+        
+        <h2 id="allergen-guides">🎯 Comprehensive Allergen-Specific Guides</h2>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🥜 Tree Nut & Peanut Allergy Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Asian cuisines (pad thai, satay, curry pastes)</li>
+                    <li>Pesto and romesco sauces</li>
+                    <li>Salad dressings and vinaigrettes</li>
+                    <li>Ice creams and desserts (even vanilla)</li>
+                    <li>Bread and baked goods (almond flour trending)</li>
+                    <li>Vegetarian/vegan meat substitutes</li>
+                    <li>Energy bars and granola</li>
+                    <li>Coffee drinks (nut milk, flavorings)</li>
+                </ul>
+                
+                <h4>High-Risk Cuisines</h4>
+                <ul>
+                    <li><strong>Thai:</strong> Peanuts in many dishes, pastes</li>
+                    <li><strong>Chinese:</strong> Cashews, almonds in stir-fries</li>
+                    <li><strong>Indian:</strong> Ground nuts in curries, chutneys</li>
+                    <li><strong>Mediterranean:</strong> Pine nuts, almonds widespread</li>
+                    <li><strong>Mexican:</strong> Mole sauces often contain nuts</li>
+                </ul>
+                
+                <h4>Safe Ordering Tips</h4>
+                <ul>
+                    <li>Choose grilled proteins with simple seasonings</li>
+                    <li>Ask for oil and butter only (no nut oils)</li>
+                    <li>Avoid anything "crusted" or "encrusted"</li>
+                    <li>Skip desserts unless verified nut-free</li>
+                    <li>Request new oil for fried items</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🌾 Gluten/Celiac Disease Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Soy sauce, teriyaki, and marinades</li>
+                    <li>Soups and broths (flour thickening)</li>
+                    <li>Imitation crab and processed meats</li>
+                    <li>French fries (batter coating or shared fryer)</li>
+                    <li>Salad dressings (malt vinegar, thickeners)</li>
+                    <li>Scrambled eggs (some add pancake batter)</li>
+                    <li>Rice dishes (may contain orzo pasta)</li>
+                    <li>Oats (unless certified gluten-free)</li>
+                </ul>
+                
+                <h4>Cross-Contamination Risks</h4>
+                <ul>
+                    <li><strong>Shared fryers:</strong> Even for naturally GF items</li>
+                    <li><strong>Toasters:</strong> Request untoasted GF bread</li>
+                    <li><strong>Pizza ovens:</strong> Flour in the air</li>
+                    <li><strong>Pasta water:</strong> Used for GF pasta too</li>
+                    <li><strong>Grill surfaces:</strong> Bread and buns</li>
+                </ul>
+                
+                <h4>Safe Strategies</h4>
+                <ul>
+                    <li>Call ahead during off-peak hours</li>
+                    <li>Choose naturally GF cuisines (Mexican, Indian)</li>
+                    <li>Ask for dedicated prep area and tools</li>
+                    <li>Bring your own GF soy sauce</li>
+                    <li>Order whole foods: grilled meat, steamed vegetables</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🥛 Dairy/Lactose Allergy Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Bread and buns (milk, butter)</li>
+                    <li>Processed meats (lactose as binder)</li>
+                    <li>Margarine (may contain whey)</li>
+                    <li>Dark chocolate (milk powders)</li>
+                    <li>Wine and beer (casein in processing)</li>
+                    <li>Caramel coloring (lactose carrier)</li>
+                    <li>Medications and supplements</li>
+                    <li>"Non-dairy" creamers (casein)</li>
+                </ul>
+                
+                <h4>Label Terms to Know</h4>
+                <ul>
+                    <li>Casein, caseinates</li>
+                    <li>Whey (all forms)</li>
+                    <li>Lactalbumin, lactoglobulin</li>
+                    <li>Ghee (clarified butter)</li>
+                    <li>Curds</li>
+                </ul>
+                
+                <h4>Dairy-Free Dining Tips</h4>
+                <ul>
+                    <li>Asian cuisines often naturally dairy-free</li>
+                    <li>Request olive oil instead of butter</li>
+                    <li>Ask about vegan menu options</li>
+                    <li>Verify "dairy-free" means no butter/ghee</li>
+                    <li>Bring dairy-free cheese for pizza places</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🦐 Shellfish & Fish Allergy Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Worcestershire sauce (anchovies)</li>
+                    <li>Caesar dressing (anchovies)</li>
+                    <li>Asian sauces (oyster, fish sauce)</li>
+                    <li>Bouillabaisse and seafood broths</li>
+                    <li>Imitation crab (contains real fish)</li>
+                    <li>Omega-3 supplements in foods</li>
+                    <li>Gelatin (sometimes fish-derived)</li>
+                    <li>BBQ and steak sauces (anchovies)</li>
+                </ul>
+                
+                <h4>Cross-Contamination Zones</h4>
+                <ul>
+                    <li>Seafood restaurants (airborne proteins)</li>
+                    <li>Sushi bars (shared surfaces)</li>
+                    <li>Hibachi grills</li>
+                    <li>Fish and chips shops (oil)</li>
+                    <li>Surf and turf preparations</li>
+                </ul>
+                
+                <h4>Safe Ordering</h4>
+                <ul>
+                    <li>Avoid restaurants specializing in seafood</li>
+                    <li>Order first items cooked (clean grill)</li>
+                    <li>Ask about dedicated fryers</li>
+                    <li>Verify broths and sauces</li>
+                    <li>Choose restaurants with separate prep areas</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🥚 Egg Allergy Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Pasta (especially fresh)</li>
+                    <li>Baked goods glazes</li>
+                    <li>Meatballs and meatloaf (binder)</li>
+                    <li>Mayonnaise-based sauces</li>
+                    <li>Marshmallows and meringues</li>
+                    <li>Some coffee foam drinks</li>
+                    <li>Pretzels (egg wash)</li>
+                    <li>Flu vaccines (cultured in eggs)</li>
+                </ul>
+                
+                <h4>Egg Replacements to Know</h4>
+                <ul>
+                    <li>Baking: Applesauce, flax eggs</li>
+                    <li>Binding: Breadcrumbs, oats</li>
+                    <li>Leavening: Baking soda + vinegar</li>
+                    <li>Mayo substitute: Vegan mayo</li>
+                </ul>
+                
+                <h4>Egg-Free Options</h4>
+                <ul>
+                    <li>Most Asian noodles (rice, udon)</li>
+                    <li>Vegan baked goods</li>
+                    <li>Oil-based salad dressings</li>
+                    <li>Sorbet instead of ice cream</li>
+                    <li>Hash browns (verify no egg binder)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="allergen-section">
+            <h3 class="allergen-title">🌱 Soy Allergy Guide</h3>
+            <div class="allergen-card">
+                <h4>Hidden Sources</h4>
+                <ul>
+                    <li>Vegetable oil (often soybean)</li>
+                    <li>Lecithin (emulsifier in chocolate)</li>
+                    <li>Natural flavors (may be soy-derived)</li>
+                    <li>Vitamin E (tocopherols from soy)</li>
+                    <li>Asian sauces (not just soy sauce)</li>
+                    <li>Bread and baked goods</li>
+                    <li>Canned tuna (in soy broth)</li>
+                    <li>Protein bars and shakes</li>
+                </ul>
+                
+                <h4>Safe Alternatives</h4>
+                <ul>
+                    <li>Coconut aminos instead of soy sauce</li>
+                    <li>Olive oil or avocado oil</li>
+                    <li>Sunflower lecithin products</li>
+                    <li>Rice-based Asian dishes</li>
+                    <li>Mediterranean cuisine (olive oil based)</li>
+                </ul>
+                
+                <h4>Dining Strategies</h4>
+                <ul>
+                    <li>Avoid Asian restaurants if severe</li>
+                    <li>Request oil-free preparations</li>
+                    <li>Ask for ingredient lists</li>
+                    <li>Bring soy-free condiments</li>
+                    <li>Choose whole, unprocessed foods</li>
+                </ul>
+            </div>
+        </div>
         
         <h2 id="understanding-tech">🤖 Understanding Our Technology</h2>
         
@@ -461,5 +1076,35 @@
             </p>
         </div>
     </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/allergy-safety-guide.html">Allergy Safety Guide</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="/support.html">Help Center</a>
+                <a href="/support.html#contact">Contact Us</a>
+                <a href="/data-deletion.html">Delete My Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:contact@happy-munch.com">contact@happy-munch.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
+        </div>
+    </footer>
 </body>
 </html>

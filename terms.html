@@ -3,99 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Happy Munch</title>
+    <title>Terms of Service | Food App Legal Terms | Happy Munch</title>
+    <meta name="description" content="Happy Munch terms of service. Legal terms for our AI-powered food allergy and diet recommendation app. Medical disclaimer, user obligations, and liability information.">
+    <meta name="keywords" content="food app terms of service, restaurant app legal terms, dietary app disclaimer, food allergy app terms, medical disclaimer food app, app terms and conditions, legal agreement food app">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/terms.html">
+    <meta property="og:title" content="Terms of Service - Happy Munch">
+    <meta property="og:description" content="Legal terms for Happy Munch AI-powered food recommendation app. Medical disclaimer and user obligations.">
+    <meta property="og:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://happy-munch.com/terms.html">
+    <meta property="twitter:title" content="Terms of Service - Happy Munch">
+    <meta property="twitter:description" content="Legal terms for Happy Munch AI-powered food recommendation app. Medical disclaimer and user obligations.">
+    <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service",
+        "description": "Legal terms and conditions for using Happy Munch food recommendation app.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Happy Munch",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://happy-munch.com/assets/adaptive-icon1.png"
+            }
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-26"
+    }
+    </script>
+    
     <style>
+        /* Geist Font Face Declarations */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
+            padding: 6rem 2rem 2rem;
             min-height: 100vh;
         }
         
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
         h1 {
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            line-height: 1.1;
+            text-align: left;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         h2 {
-            color: #333;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
         }
         
         p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-        
-        .last-updated {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        
-        .contact {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
         }
         
         ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
         }
         
         li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
         }
         
         strong {
-            color: #333;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            text-align: left;
+        }
+        
+        .contact {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 4rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .contact p {
+            color: rgba(255,255,255,0.95);
+        }
+        
+        .contact a {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .contact strong {
+            color: white;
         }
         
         .important-notice {
-            background-color: #fff3cd;
+            background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%);
             border: 2px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
         
         .important-notice h3 {
             color: #856404;
-            margin-bottom: 10px;
-            font-size: 1.2em;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .important-notice p {
             color: #856404;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .important-notice ul {
+            color: #856404;
+        }
+        
+        .important-notice li {
+            color: #856404;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+        
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 5rem 1rem 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            ul {
+                margin-left: 1.5rem;
+            }
+            
+            .important-notice {
+                padding: 1.5rem;
+            }
+            
+            .contact {
+                padding: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/adaptive-icon1.png" alt="Happy Munch">
+                Happy Munch
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+    
     <div class="container">
-        <h1>Terms of Service</h1>
+        <a href="/" class="back-link">← Back to Home</a>
+        
+        <h1><span class="gradient-text">Terms of Service</span></h1>
         <p class="last-updated">Last updated: December 23, 2025</p>
         
         <h2>1. Acceptance of Terms</h2>
@@ -203,5 +527,35 @@
             <p>Address: Cohabby, Inc., California, USA</p>
         </div>
     </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/allergy-safety-guide.html">Allergy Safety Guide</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="/support.html">Help Center</a>
+                <a href="/support.html#contact">Contact Us</a>
+                <a href="/data-deletion.html">Delete My Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:contact@happy-munch.com">contact@happy-munch.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
+        </div>
+    </footer>
 </body>
 </html>

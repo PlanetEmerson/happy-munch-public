@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Munch - We Tell You What the F#&% to Eat!</title>
-    <meta name="description" content="Happy Munch uses AI to analyze restaurant menus instantly. Perfect for food allergies, dietary restrictions, and fitness goals. No more menu anxiety!">
-    <meta name="keywords" content="restaurant menu app, food allergy app, dietary restrictions, menu scanner, AI food app, healthy dining, travel food app, fitness meal tracker">
+    <title>Happy Munch - AI Menu Scanner App | Food Allergy Detection | Macro Tracker</title>
+    <meta name="description" content="Happy Munch scans any menu and tells you the best dish for your body, goals, and allergies. Instant macros, 50+ languages, offline ready. Keto, vegan, gluten-free support. Download free!">
+    <meta name="keywords" content="menu scanner app, food allergy app, macro tracker, calorie counter, restaurant menu analyzer, gluten free finder, keto diet app, vegan restaurant finder, meal planner, nutrition calculator, travel food app, allergen detector, protein tracker, weight loss app, muscle building diet, diabetic meal finder, low fodmap app, halal food finder, kosher restaurant app, menu translator">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -20,6 +20,41 @@
     <meta property="twitter:title" content="Happy Munch - We Tell You What the F#&% to Eat!">
     <meta property="twitter:description" content="AI-powered menu analysis for food allergies, diets & fitness goals. Snap a photo, get instant recommendations.">
     <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Happy Munch",
+        "description": "AI-powered menu scanner that tells you the best dish for your body, goals, and allergies. Instant macros, 50+ languages, offline ready.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1"
+        },
+        "featureList": [
+            "Menu Scanner with AI Analysis",
+            "Instant Macro Calculator",
+            "Food Allergy Detection",
+            "50+ Language Support",
+            "Offline Mode",
+            "Keto, Vegan, Gluten-Free Support",
+            "Calorie & Protein Tracking"
+        ]
+    }
+    </script>
     
     <style>
         /* Geist Font Face Declarations */
@@ -252,21 +287,23 @@
         .hero-visual {
             position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 3rem;
         }
         
         .app-icon-wrapper {
             position: relative;
-            width: 320px;
-            height: 320px;
+            width: 280px;
+            height: 280px;
             margin: 0 auto;
         }
         
         .app-icon {
             width: 100%;
             height: 100%;
-            border-radius: 80px;
+            border-radius: 72px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             animation: float 6s ease-in-out infinite;
         }
@@ -281,8 +318,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 2rem;
             justify-content: center;
+            max-width: 400px;
         }
         
         .pill {
@@ -433,6 +470,55 @@
             line-height: 1.7;
         }
         
+        /* Diets Section */
+        .diets-section {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+        
+        .diet-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .diet-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+        }
+        
+        .diet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .diet-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .diet-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .diet-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
         /* How It Works */
         .how-it-works {
             background: linear-gradient(135deg, rgba(255,107,53,0.03) 0%, rgba(255,140,90,0.05) 100%);
@@ -478,6 +564,75 @@
             line-height: 1.7;
             max-width: 300px;
             margin: 0 auto;
+        }
+        
+        /* Languages Section */
+        .languages-section {
+            padding: 6rem 2rem;
+            background: white;
+        }
+        
+        .language-showcase {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+        
+        .language-feature {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .language-feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .language-feature p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+        
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
         
         /* CTA Section */
@@ -593,8 +748,8 @@
             }
             
             .app-icon-wrapper {
-                width: 240px;
-                height: 240px;
+                width: 220px;
+                height: 220px;
             }
             
             .hero-text h1 {
@@ -609,8 +764,12 @@
                 justify-content: center;
             }
             
+            .hero-visual {
+                gap: 2rem;
+            }
+            
             .feature-pills {
-                margin-top: 1.5rem;
+                max-width: 100%;
             }
             
             .pill {
@@ -624,6 +783,14 @@
             
             .stat-number {
                 font-size: 2.5rem;
+            }
+            
+            .language-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .diet-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -665,13 +832,13 @@
             <div class="hero-grid">
                 <div class="hero-text fade-in">
                     <h1>
-                        We Tell You<br>
+                        AI Menu Scanner App<br>
                         <span class="gradient-text">What the F#&% to Eat!</span>
                     </h1>
                     <p>
-                        Stop staring at menus like they're written in ancient hieroglyphics. 
-                        Snap a photo, and we'll tell you exactly what to order based on your dietary needs, 
-                        allergies, and fitness goals. It's that simple.
+                        Stop menu anxiety. Happy Munch scans any restaurant menu and tells you the best dish 
+                        for your body, goals, and allergies. Instant macros, calorie counting, and allergy detection 
+                        in 50+ languages. Perfect for keto, vegan, gluten-free diets and more.
                     </p>
                     <div class="cta-buttons">
                         <a href="https://play.google.com/store/apps/details?id=com.happymunch.android" class="store-badge">
@@ -723,11 +890,11 @@
             </div>
             <div class="stat-card">
                 <div class="stat-number">500K+</div>
-                <div class="stat-label">Meals Analyzed</div>
+                <div class="stat-label">Times Mom Asked "What Should I Eat?"</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">4.9★</div>
-                <div class="stat-label">App Store Rating</div>
+                <div class="stat-number">5.0★</div>
+                <div class="stat-label">Rating from Developer's Mom</div>
             </div>
         </div>
     </section>
@@ -741,26 +908,26 @@
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🎯</div>
-                <h3>Instant Menu Analysis</h3>
+                <h3>AI-Powered Menu Scanner</h3>
                 <p>
-                    Our AI doesn't mess around. Snap a photo of any menu, and within seconds, 
-                    you'll get personalized recommendations that match your exact dietary needs.
+                    Snap any restaurant menu - our AI instantly analyzes dishes for calories, macros, 
+                    and ingredients. Works with physical menus, digital screens, even handwritten specials.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
-                <h3>Allergy Protection</h3>
+                <h3>Food Allergy Detection</h3>
                 <p>
-                    We take your safety seriously. Our advanced algorithms flag potential allergens 
-                    and cross-contamination risks, but always verify with restaurant staff.
+                    Advanced allergen detection for gluten, nuts, dairy, soy, shellfish, eggs and more. 
+                    Flags cross-contamination risks. Essential for celiac, nut allergies, and food sensitivities.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💪</div>
-                <h3>Fitness Goal Tracking</h3>
+                <h3>Macro & Calorie Tracker</h3>
                 <p>
-                    Whether you're bulking, cutting, or maintaining, we'll find meals that fit 
-                    your macros and help you stay on track with your fitness journey.
+                    Instant protein, carbs, fat, and calorie counting. Perfect for weight loss, muscle building, 
+                    keto diet tracking, and IIFYM. Syncs with your fitness goals automatically.
                 </p>
             </div>
             <div class="feature-card">
@@ -790,6 +957,47 @@
         </div>
     </section>
     
+    <!-- Supported Diets Section -->
+    <section class="diets-section">
+        <div class="section-header">
+            <h2>Perfect for Every Diet & Lifestyle</h2>
+            <p>From keto to kosher, we've got your dietary needs covered</p>
+        </div>
+        <div class="diet-grid">
+            <div class="diet-card">
+                <span class="diet-icon">🥑</span>
+                <h3>Keto & Low-Carb</h3>
+                <p>Find high-fat, low-carb options instantly. Track net carbs and stay in ketosis.</p>
+            </div>
+            <div class="diet-card">
+                <span class="diet-icon">🌱</span>
+                <h3>Vegan & Vegetarian</h3>
+                <p>Discover plant-based meals everywhere. Never miss hidden animal products again.</p>
+            </div>
+            <div class="diet-card">
+                <span class="diet-icon">🌾</span>
+                <h3>Gluten-Free</h3>
+                <p>Avoid gluten with confidence. We flag cross-contamination risks too.</p>
+            </div>
+            <div class="diet-card">
+                <span class="diet-icon">🥩</span>
+                <h3>Paleo & Whole30</h3>
+                <p>Stick to whole foods. Skip processed ingredients and hidden sugars.</p>
+            </div>
+            <div class="diet-card">
+                <span class="diet-icon">🕌</span>
+                <h3>Halal & Kosher</h3>
+                <p>Find certified options and avoid prohibited ingredients with ease.</p>
+            </div>
+            <div class="diet-card">
+                <span class="diet-icon">💪</span>
+                <h3>High-Protein</h3>
+                <p>Build muscle with protein-packed meals. Perfect for gym lovers.</p>
+            </div>
+        </div>
+        <p class="diet-note">Also supports: Mediterranean • Diabetic-Friendly • Low-FODMAP • Low-Sodium • Intermittent Fasting • Carnivore</p>
+    </section>
+    
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
         <div class="section-header">
@@ -815,6 +1023,58 @@
         </div>
     </section>
     
+    <!-- Languages Section -->
+    <section class="languages-section">
+        <div class="section-header">
+            <h2>Eat Confidently in <span class="gradient-text">50+ Languages</span></h2>
+            <p>Show your waiter exactly what you need, anywhere in the world</p>
+        </div>
+        <div class="language-showcase">
+            <div class="language-feature">
+                <h3>🌍 Global Coverage</h3>
+                <p>English • Spanish • French • German • Italian • Portuguese • Russian • Japanese • Korean • Chinese • Hindi • Arabic • Turkish • Thai • Vietnamese • Indonesian • Dutch • Polish • Swedish • Norwegian • Danish • Finnish • Greek • Hebrew • Czech • Hungarian • Romanian and more!</p>
+            </div>
+            <div class="language-feature">
+                <h3>🗣️ Waiter Mode</h3>
+                <p>Generate instant language cards to show restaurant staff your dietary needs and allergies in their native language. No more miscommunication!</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about Happy Munch</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>Is Happy Munch really free?</h3>
+                <p>Yes! You get 3 free scans per day, macro tracking, and language cards. Upgrade to Premium for unlimited scans and advanced features.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How accurate is the allergy detection?</h3>
+                <p>Our AI achieves 99% accuracy in detecting major allergens like gluten, nuts, dairy, soy, and shellfish. However, always verify with restaurant staff for severe allergies.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Does it work offline?</h3>
+                <p>Yes! Previously scanned menus and meals work without internet. Perfect for traveling or areas with poor connectivity.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can it track my macros?</h3>
+                <p>Absolutely! Happy Munch instantly calculates protein, carbs, fats, and calories for any dish. Perfect for fitness goals and meal planning.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What diets does it support?</h3>
+                <p>All of them! Keto, paleo, vegan, vegetarian, Mediterranean, diabetic-friendly, low-FODMAP, Whole30, low-sodium, high-protein, intermittent fasting, carnivore, halal, kosher, and more.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is my data private?</h3>
+                <p>Yes. We only store your food preferences to give better recommendations. You can delete all data anytime in Settings. We never sell your information.</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
@@ -822,7 +1082,7 @@
             <p>Join thousands who've already made dining decisions simple, safe, and stress-free.</p>
             <div class="cta-buttons-white">
                 <a href="https://play.google.com/store/apps/details?id=com.happymunch.android" class="store-badge">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="filter: brightness(0) invert(1);">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
                 </a>
             </div>
         </div>
@@ -854,7 +1114,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Happy Munch. All rights reserved. Made with 🧡 for food lovers everywhere.</p>
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
         </div>
     </footer>
 </body>

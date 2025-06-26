@@ -3,77 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Your Data - Happy Munch</title>
+    <title>Delete Your Data | Data Removal Request | Happy Munch</title>
+    <meta name="description" content="Request deletion of your Happy Munch account and data. GDPR compliant data removal process. Delete your food preferences, meal history, and personal information.">
+    <meta name="keywords" content="delete data, data removal, GDPR deletion, account deletion, privacy rights, data protection, remove personal data, delete account, data erasure">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/delete-data.html">
+    <meta property="og:title" content="Delete Your Data - Happy Munch">
+    <meta property="og:description" content="Request deletion of your Happy Munch account and all associated data. GDPR compliant data removal.">
+    <meta property="og:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://happy-munch.com/delete-data.html">
+    <meta property="twitter:title" content="Delete Your Data - Happy Munch">
+    <meta property="twitter:description" content="Request deletion of your Happy Munch account and all associated data. GDPR compliant data removal.">
+    <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Delete Your Data from Happy Munch",
+        "description": "Step-by-step guide to delete your account and data from Happy Munch app",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Open the App",
+                "text": "Open the Happy Munch app on your device"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Navigate to Profile",
+                "text": "Navigate to the Profile tab (user icon at bottom right)"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Find Account Settings",
+                "text": "Scroll down to the Account section"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Delete Account",
+                "text": "Tap Delete Account and confirm your decision"
+            }
+        ]
+    }
+    </script>
+    
     <style>
+        /* Geist Font Face Declarations */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
             line-height: 1.6;
-            max-width: 800px;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fb;
-            color: #2d3748;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #667eea;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        h2 {
-            color: #4a5568;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        .method {
-            background: #f7fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .steps {
-            margin-left: 20px;
-        }
-        .steps li {
-            margin: 10px 0;
-        }
-        .warning {
-            background: #fff5f5;
-            border: 2px solid #feb2b2;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 0;
-            color: #c53030;
-        }
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 14px;
-            color: #718096;
-        }
-        a {
-            color: #667eea;
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             text-decoration: none;
         }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+        
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            line-height: 1.1;
+            text-align: center;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .method {
+            background: white;
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+        }
+        
+        .method:hover {
+            border-color: var(--orange-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .steps {
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .steps li {
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .warning {
+            background: linear-gradient(135deg, #fee 0%, #fff5f5 100%);
+            border: 2px solid #fcc;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .warning strong {
+            color: var(--red);
+            font-weight: 700;
+        }
+        
+        .warning ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            color: #c00;
+        }
+        
+        .warning li {
+            margin: 0.5rem 0;
+        }
+        
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
         a:hover {
+            color: var(--orange-dark);
             text-decoration: underline;
         }
+        
         .icon {
-            font-size: 24px;
-            margin-right: 10px;
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
             vertical-align: middle;
+        }
+        
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        .footer-nav a {
+            margin: 0 1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+        
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .main-container {
+                padding: 5rem 1rem 2rem;
+            }
+            
+            .container {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .method {
+                padding: 1.5rem;
+            }
+            
+            .warning {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>How to Delete Your Data</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/adaptive-icon1.png" alt="Happy Munch">
+                Happy Munch
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <a href="/" class="back-link">← Back to Home</a>
+        
+        <div class="container">
+            <h1>How to <span class="gradient-text">Delete Your Data</span></h1>
         
         <p>Happy Munch respects your privacy and provides you with full control over your data. Here's how you can delete your account and all associated data:</p>
         
@@ -121,10 +475,41 @@
         <h2>Data Retention</h2>
         <p>Once you request deletion, we permanently remove all your personal data from our systems within 30 days. Some anonymized, aggregated data may be retained for improving our service, but this cannot be linked back to you.</p>
         
-        <div class="footer">
-            <p>Questions? <a href="support.html">Contact Support</a> | <a href="privacy.html">Privacy Policy</a></p>
-            <p><a href="index.html">← Back to Happy Munch</a></p>
+        <div class="footer-nav">
+            <a href="/support.html">Contact Support</a>
+            <a href="/privacy.html">Privacy Policy</a>
+        </div>
         </div>
     </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/allergy-safety-guide.html">Allergy Safety Guide</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="/support.html">Help Center</a>
+                <a href="/support.html#contact">Contact Us</a>
+                <a href="/data-deletion.html">Delete My Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:contact@happy-munch.com">contact@happy-munch.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
+        </div>
+    </footer>
 </body>
 </html>

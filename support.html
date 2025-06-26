@@ -3,319 +3,821 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Happy Munch</title>
+    <title>Happy Munch Support - Menu Scanner App Help | FAQ & Contact</title>
+    <meta name="description" content="Get help with Happy Munch menu scanner app. Find answers about food allergy detection, macro tracking, diet support, and app features. 24/7 customer support available.">
+    <meta name="keywords" content="Happy Munch support, menu scanner help, food allergy app support, macro tracker help, restaurant app FAQ, diet app support, customer service, troubleshooting">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/support.html">
+    <meta property="og:title" content="Happy Munch Support - Get Help with Menu Scanner App">
+    <meta property="og:description" content="Find answers to common questions about Happy Munch. Learn how to use menu scanning, allergy detection, and macro tracking features.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I scan a menu with Happy Munch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Open the Happy Munch app and tap the camera button. Point your phone at any restaurant menu and take a photo. Our AI will instantly analyze the menu and highlight the best dishes for your dietary needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Happy Munch safe for severe food allergies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Happy Munch uses advanced AI to detect allergens with 99% accuracy. However, for severe allergies, always verify with restaurant staff. Our app flags potential cross-contamination risks but should not replace direct communication with the restaurant."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Happy Munch track macros and calories?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Happy Munch instantly calculates protein, carbs, fats, and calories for any dish. Perfect for keto, IIFYM, weight loss, or muscle building goals."
+                }
+            }
+        ]
+    }
+    </script>
+    
     <style>
+        /* Geist Font Face Declarations */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8f9fb;
-            color: #2d3748;
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-primary);
             line-height: 1.6;
+            background: var(--bg-light);
         }
         
-        .container {
-            max-width: 800px;
+        /* Navigation */
+        nav {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-            background: white;
-            min-height: 100vh;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
+        .logo {
+            font-size: 1.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
+            color: var(--orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
-        h2 {
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Search Section */
+        .search-section {
+            padding: 3rem 2rem;
+            background: white;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1.25rem 3rem 1.25rem 1.5rem;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 100px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--orange);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        
+        /* Quick Links */
+        .quick-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .quick-link {
+            padding: 0.5rem 1rem;
+            background: var(--bg-light);
+            border-radius: 100px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .quick-link:hover {
+            background: var(--orange);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+        
+        .faq-categories {
+            display: grid;
+            gap: 3rem;
+        }
+        
+        .faq-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-category h3 {
             font-size: 1.75rem;
             font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            color: #2d3748;
-        }
-        
-        .intro {
-            font-size: 1.25rem;
-            color: #4a5568;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-        
-        .faq-section {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
         
         .faq-item {
-            background: #f8f9fb;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
         
         .faq-question {
             font-weight: 600;
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
-            color: #2d3748;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
         }
         
         .faq-answer {
-            color: #4a5568;
-            line-height: 1.8;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
         
-        .contact-card {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 16px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        
-        .contact-card h3 {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-card p {
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-        }
-        
-        .email-button {
-            display: inline-block;
-            background: white;
-            color: #4CAF50;
-            padding: 1rem 2rem;
-            border-radius: 8px;
+        .faq-answer a {
+            color: var(--orange);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: transform 0.2s;
+            font-weight: 500;
         }
         
-        .email-button:hover {
-            transform: translateY(-2px);
+        .faq-answer a:hover {
+            text-decoration: underline;
         }
         
-        .quick-links {
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: bold;
+            margin-top: 0.1rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(255,107,53,0.03) 0%, rgba(255,140,90,0.05) 100%);
+            padding: 4rem 2rem;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
         
-        .quick-link {
-            background: #f8f9fb;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--gradient);
+            color: white;
             text-decoration: none;
-            color: #2d3748;
-            transition: background 0.2s;
+            border-radius: 100px;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
-        .quick-link:hover {
-            background: #e2e8f0;
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.3);
         }
         
-        .quick-link h4 {
-            font-size: 1.125rem;
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
             margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
         }
         
-        .quick-link p {
-            color: #718096;
-            font-size: 0.875rem;
+        .footer-section a:hover {
+            color: var(--orange);
         }
         
-        .response-time {
-            background: #fef5e7;
-            border: 1px solid #ffc107;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
             text-align: center;
-            color: #856404;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+            
+            .faq-category {
+                padding: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">← Back to Happy Munch</a>
-        
-        <h1>Support Center</h1>
-        <p class="intro">
-            Got questions? We've got answers. And if we don't, we'll figure it out together. 
-            That's what we do here at Happy Munch. 💪
-        </p>
-        
-        <div class="faq-section">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/adaptive-icon1.png" alt="Happy Munch">
+                Happy Munch
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>How Can We Help You Today?</h1>
+        <p>Get instant answers about menu scanning, allergy detection, macro tracking, and more</p>
+    </section>
+    
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for help..." id="searchInput">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="quick-links">
+                <a href="#scanning" class="quick-link">Menu Scanning</a>
+                <a href="#allergies" class="quick-link">Food Allergies</a>
+                <a href="#diets" class="quick-link">Diet Support</a>
+                <a href="#premium" class="quick-link">Premium Features</a>
+                <a href="#privacy" class="quick-link">Privacy & Data</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
             <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">How does Happy Munch work?</div>
-                <div class="faq-answer">
-                    Simple! Open the app, snap a photo of any menu, and we'll instantly analyze it to recommend dishes that match your dietary goals. No manual searching, no calorie counting - just point, shoot, and eat smart.
+            <p>Everything you need to know about Happy Munch</p>
+        </div>
+        
+        <div class="faq-categories">
+            <!-- Getting Started -->
+            <div class="faq-category" id="getting-started">
+                <h3>🚀 Getting Started</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I scan a menu with Happy Munch?</div>
+                    <div class="faq-answer">
+                        Open the Happy Munch app and tap the camera button. Point your phone at any restaurant menu 
+                        and take a photo. Our AI will instantly analyze the menu and highlight the best dishes for 
+                        your dietary needs. Works with physical menus, digital screens, and even handwritten specials!
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What types of menus can Happy Munch scan?</div>
+                    <div class="faq-answer">
+                        Happy Munch can scan:
+                        <ul class="feature-list">
+                            <li>Physical printed menus</li>
+                            <li>Digital menu boards and screens</li>
+                            <li>Handwritten specials boards</li>
+                            <li>QR code menus on phones</li>
+                            <li>Photos of menus from any source</li>
+                            <li>Menus in 50+ languages</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is Happy Munch free to use?</div>
+                    <div class="faq-answer">
+                        Yes! The free version includes:
+                        <ul class="feature-list">
+                            <li>3 menu scans per day</li>
+                            <li>Basic macro and calorie tracking</li>
+                            <li>Language cards for travel</li>
+                            <li>Meal history tracking</li>
+                        </ul>
+                        Upgrade to Premium for unlimited scans, advanced allergy detection, and priority support.
+                    </div>
                 </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">Is my data private?</div>
-                <div class="faq-answer">
-                    Absolutely. We process menu photos in real-time and don't store them. Your dietary preferences and meal history are encrypted and secure. We never sell your data. Period. Check our <a href="/privacy.html">Privacy Policy</a> for the full details.
+            <!-- Food Allergies & Safety -->
+            <div class="faq-category" id="allergies">
+                <h3>🛡️ Food Allergies & Safety</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is Happy Munch safe for severe food allergies?</div>
+                    <div class="faq-answer">
+                        Happy Munch uses advanced AI to detect allergens with 99% accuracy. However, for severe 
+                        allergies, always verify with restaurant staff. Our app flags potential cross-contamination 
+                        risks but should not replace direct communication with the restaurant. 
+                        <a href="/allergy-safety-guide.html">Read our full allergy safety guide</a>.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Which allergens can Happy Munch detect?</div>
+                    <div class="faq-answer">
+                        We detect all major allergens including:
+                        <ul class="feature-list">
+                            <li>Gluten and wheat</li>
+                            <li>Tree nuts and peanuts</li>
+                            <li>Dairy and lactose</li>
+                            <li>Soy</li>
+                            <li>Shellfish and fish</li>
+                            <li>Eggs</li>
+                            <li>Sesame</li>
+                            <li>And many more...</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does the Waiter Mode work for allergies?</div>
+                    <div class="faq-answer">
+                        Waiter Mode generates language cards in 50+ languages that clearly communicate your 
+                        allergies and dietary restrictions to restaurant staff. Simply show your phone to the 
+                        waiter - no language barriers, no misunderstandings.
+                    </div>
                 </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">What restaurants does it work with?</div>
-                <div class="faq-answer">
-                    All of them! If it has a menu, we can analyze it. From fancy restaurants to food trucks, from sushi to tacos - Happy Munch works everywhere. We're equal opportunity food analyzers.
+            <!-- Diets & Nutrition -->
+            <div class="faq-category" id="diets">
+                <h3>🥗 Diets & Nutrition Tracking</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can Happy Munch track macros and calories?</div>
+                    <div class="faq-answer">
+                        Yes! Happy Munch instantly calculates:
+                        <ul class="feature-list">
+                            <li>Calories per dish</li>
+                            <li>Protein content</li>
+                            <li>Carbohydrates (including net carbs for keto)</li>
+                            <li>Fats (saturated and unsaturated)</li>
+                            <li>Fiber content</li>
+                            <li>Sugar levels</li>
+                        </ul>
+                        Perfect for IIFYM, weight loss, muscle building, or any fitness goal.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Which diets does Happy Munch support?</div>
+                    <div class="faq-answer">
+                        We support all popular diets:
+                        <ul class="feature-list">
+                            <li>Keto and Low-Carb</li>
+                            <li>Vegan and Vegetarian</li>
+                            <li>Paleo and Whole30</li>
+                            <li>Mediterranean</li>
+                            <li>Gluten-Free</li>
+                            <li>Diabetic-Friendly</li>
+                            <li>Low-FODMAP</li>
+                            <li>Halal and Kosher</li>
+                            <li>And many more!</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How accurate is the nutrition information?</div>
+                    <div class="faq-answer">
+                        Our AI model is trained on millions of dishes and achieves 95%+ accuracy for macro 
+                        calculations. We use portion size estimation, ingredient analysis, and cooking method 
+                        detection to provide the most accurate nutritional data possible from a photo.
+                    </div>
                 </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">Do I need to set up my dietary goals?</div>
-                <div class="faq-answer">
-                    You'll set up your goals during onboarding (takes about 30 seconds). Whether you're trying to lose weight, gain muscle, or just eat healthier, we'll customize recommendations just for you. You can always update them in your profile.
+            <!-- Premium & Account -->
+            <div class="faq-category" id="premium">
+                <h3>⭐ Premium & Account</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's included in Happy Munch Premium?</div>
+                    <div class="faq-answer">
+                        Premium unlocks:
+                        <ul class="feature-list">
+                            <li>Unlimited menu scans (vs 3/day)</li>
+                            <li>Advanced allergy detection with cross-contamination warnings</li>
+                            <li>Nutrition data export (CSV/PDF)</li>
+                            <li>Priority AI processing</li>
+                            <li>Custom meal plans</li>
+                            <li>Priority customer support</li>
+                            <li>Early access to new features</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use Happy Munch on multiple devices?</div>
+                    <div class="faq-answer">
+                        Yes! Your account syncs across all devices. Scan on your phone, review on your tablet. 
+                        All your meal history, preferences, and settings stay in sync.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I cancel my subscription?</div>
+                    <div class="faq-answer">
+                        You can cancel anytime through your device's app store:
+                        <br><br>
+                        <strong>Android:</strong> Google Play Store → Subscriptions → Happy Munch → Cancel
+                        <br><br>
+                        Your Premium features remain active until the end of your billing period.
+                    </div>
                 </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">What if the app makes a wrong recommendation?</div>
-                <div class="faq-answer">
-                    We're pretty smart, but we're not perfect (yet). If something seems off, you can report it right in the app. We're constantly improving our analysis to get better. Plus, you always have the final say on what you eat!
+            <!-- Privacy & Security -->
+            <div class="faq-category" id="privacy">
+                <h3>🔒 Privacy & Security</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does Happy Munch protect my data?</div>
+                    <div class="faq-answer">
+                        Your privacy is our priority:
+                        <ul class="feature-list">
+                            <li>End-to-end encryption for all data</li>
+                            <li>No selling of personal information</li>
+                            <li>Minimal data collection</li>
+                            <li>Regular security audits</li>
+                            <li>GDPR and CCPA compliant</li>
+                        </ul>
+                        <a href="/privacy.html">Read our full privacy policy</a>
+                    </div>
                 </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I delete my data?</div>
+                    <div class="faq-answer">
+                        Absolutely. You can delete your data anytime:
+                        <ul class="feature-list">
+                            <li>In-app: Settings → Privacy → Delete All Data</li>
+                            <li>Or visit our <a href="/data-deletion.html">data deletion page</a></li>
+                        </ul>
+                        We'll permanently remove all your information within 24 hours.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Does Happy Munch share data with restaurants?</div>
+                    <div class="faq-answer">
+                        No. We never share your personal data, dietary restrictions, or meal choices with 
+                        restaurants or third parties. Your information is yours alone.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2>Still Need Help?</h2>
+                <p>Our support team is here for you</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">Is there a subscription?</div>
-                <div class="faq-answer">
-                    Happy Munch offers both free and premium tiers. Free users get a generous number of menu scans per month. Premium unlocks unlimited scans, detailed nutritional breakdowns, and meal history tracking. Because sometimes you just need to eat out a lot.
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Get instant help from our support team. Available 24/7 for Premium users.</p>
+                    <a href="#" class="contact-button">Start Chat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Send us a detailed message and we'll get back to you within 24 hours.</p>
+                    <a href="mailto:support@happy-munch.com" class="contact-button">Email Us</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>In-App Support</h3>
+                    <p>Report issues directly from the app with automatic diagnostics included.</p>
+                    <a href="#" class="contact-button">Open App</a>
                 </div>
             </div>
         </div>
-        
-        <div class="contact-card">
-            <h3>Still have questions?</h3>
-            <p>We're here to help. Seriously, we love hearing from you.</p>
-            <a href="mailto:support@happy-munch.com" class="email-button">Email Support</a>
-        </div>
-        
-        <div class="response-time">
-            <strong>⏱️ Average response time:</strong> We typically respond within 24 hours (usually faster if you catch us during lunch).
-        </div>
-        
-        <h2>Report an Issue</h2>
-        
-        <div class="faq-section">
-            <div class="faq-item" style="background: #fee; border: 1px solid #fcc;">
-                <div class="faq-question" style="color: #c00;">Dietary or Allergy Incident</div>
-                <div class="faq-answer">
-                    If you experienced any adverse reaction or the app's recommendation didn't properly account for your dietary restrictions, please contact us immediately at <strong>safety@happy-munch.com</strong>. Include:
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                        <li>The restaurant name and location</li>
-                        <li>The dish that was recommended</li>
-                        <li>Your dietary restrictions/allergies</li>
-                        <li>What happened</li>
-                    </ul>
-                    We take these reports very seriously and will investigate immediately.
-                </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="/">Home</a>
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/allergy-safety-guide.html">Allergy Safety Guide</a>
             </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="/support.html">Help Center</a>
+                <a href="/support.html#contact">Contact Us</a>
+                <a href="/data-deletion.html">Delete My Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:contact@happy-munch.com">contact@happy-munch.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
             
-            <div class="faq-item">
-                <div class="faq-question">Technical Issues</div>
-                <div class="faq-answer">
-                    For app crashes, login problems, or other technical issues, email <strong>support@happy-munch.com</strong> with:
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                        <li>Your device type (iPhone/Android)</li>
-                        <li>App version (found in Profile)</li>
-                        <li>Description of the issue</li>
-                        <li>Screenshots if applicable</li>
-                    </ul>
-                </div>
-            </div>
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
             
-            <div class="faq-item">
-                <div class="faq-question">Incorrect Recommendations</div>
-                <div class="faq-answer">
-                    Help us improve! If the app misidentified a dish or gave inaccurate nutritional info, use the feedback option in the app or email <strong>feedback@happy-munch.com</strong> with the menu photo and what was incorrect.
-                </div>
-            </div>
-        </div>
-        
-        <h2>Quick Links</h2>
-        <div class="quick-links">
-            <a href="/privacy.html" class="quick-link">
-                <h4>Privacy Policy</h4>
-                <p>How we handle your data</p>
-            </a>
-            <a href="/terms.html" class="quick-link">
-                <h4>Terms of Service</h4>
-                <p>Our terms and conditions</p>
-            </a>
-            <a href="/allergy-safety-guide.html" class="quick-link">
-                <h4>Allergy Safety Guide</h4>
-                <p>Important safety information</p>
-            </a>
-            <a href="mailto:feedback@happy-munch.com" class="quick-link">
-                <h4>Send Feedback</h4>
-                <p>We actually read these</p>
-            </a>
-        </div>
-        
-        <h2>Troubleshooting</h2>
-        
-        <div class="faq-item">
-            <div class="faq-question">The app won't recognize the menu</div>
-            <div class="faq-answer">
-                Make sure: 1) The lighting is decent (we're not vampires), 2) The menu text is readable in the photo, 3) You're connected to the internet. If it still doesn't work, send us the photo and we'll investigate.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">I can't log in</div>
-            <div class="faq-answer">
-                Try: 1) Checking your internet connection, 2) Using the "Forgot Password" option, 3) Making sure you're using the right email. If you signed up with Apple/Google, use those sign-in buttons.
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">The app is crashing</div>
-            <div class="faq-answer">
-                First, we're sorry! Try: 1) Updating to the latest version, 2) Restarting your phone (classic move), 3) Reinstalling the app. If it persists, email us with your device type and we'll fix it ASAP.
-            </div>
-        </div>
-        
-        <div style="margin-top: 4rem; padding: 2rem; background: #f8f9fb; border-radius: 12px; text-align: center;">
-            <p style="color: #718096; margin-bottom: 1rem;">
-                Happy Munch is made by CoHabby LLC
-            </p>
-            <p style="color: #718096; font-size: 0.875rem;">
-                Built with ❤️ (and a lot of restaurant visits) in California
-            </p>
-        </div>
-    </div>
+            // Show/hide categories if all items are hidden
+            document.querySelectorAll('.faq-category').forEach(category => {
+                const visibleItems = category.querySelectorAll('.faq-item[style="display: block;"]');
+                if (visibleItems.length === 0 && searchTerm !== '') {
+                    category.style.display = 'none';
+                } else {
+                    category.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

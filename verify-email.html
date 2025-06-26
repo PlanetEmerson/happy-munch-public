@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify Email - Happy Munch</title>
+    <title>Verify Email | Happy Munch</title>
+    <meta name="description" content="Verify your email address for Happy Munch app. Complete your account setup to start finding the perfect meals for your dietary needs.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
     <style>
+        /* Geist Font Face Declarations */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, rgba(255,107,53,0.03) 0%, rgba(255,140,90,0.05) 100%);
             margin: 0;
             padding: 0;
             display: flex;
@@ -15,58 +89,132 @@
             justify-content: center;
             min-height: 100vh;
         }
+        
         .container {
             background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-lg);
             text-align: center;
-            max-width: 400px;
+            max-width: 450px;
             width: 90%;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+        }
+        
         h1 {
-            color: #667eea;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
+        
         .message {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
         }
+        
         .button {
-            background-color: #667eea;
+            background: var(--gradient);
             color: white;
-            padding: 14px 32px;
+            padding: 1rem 2.5rem;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 100px;
             display: inline-block;
             font-weight: 600;
-            margin: 10px 0;
+            margin: 1rem 0;
             cursor: pointer;
             border: none;
-            font-size: 16px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
         }
+        
         .button:hover {
-            background-color: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.3);
         }
+        
         .error {
-            color: #e53e3e;
-            margin-top: 20px;
+            color: var(--red);
+            margin-top: 1.5rem;
+            font-weight: 500;
         }
+        
         .success {
-            color: #38a169;
-            margin-top: 20px;
+            color: var(--green);
+            margin-top: 1.5rem;
+            font-weight: 500;
         }
+        
         .loading {
-            color: #667eea;
+            color: var(--orange);
+            font-weight: 500;
+        }
+        
+        .footer-link {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer-link a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="/assets/adaptive-icon1.png" alt="Happy Munch" class="logo">
         <h1>Happy Munch</h1>
         <div id="status" class="message loading">Verifying your email...</div>
         <a id="openApp" class="button" style="display: none;" href="#">Open Happy Munch</a>
+        <div class="footer-link">
+            <a href="/">Return to Home</a>
+        </div>
     </div>
 
     <script>
