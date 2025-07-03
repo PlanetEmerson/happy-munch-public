@@ -492,6 +492,8 @@
             <li>Meal recommendations you receive and select</li>
             <li>Your meal history and favorites</li>
             <li>Timestamps of your app interactions</li>
+            <li>Subscription status and purchase history</li>
+            <li>Number of meal analyses performed (for free tier tracking)</li>
         </ul>
         
         <p><strong>Technical Information:</strong></p>
@@ -538,7 +540,8 @@
         <p>We share your data only in these specific circumstances:</p>
         <ul>
             <li><strong>OpenAI:</strong> Menu photos are sent for analysis but are not stored. Your dietary restrictions may be included to improve recommendation accuracy</li>
-            <li><strong>Service Providers:</strong> Essential services like Supabase (database) and Superwall (subscriptions) under strict data processing agreements</li>
+            <li><strong>Firebase (Google):</strong> Authentication, database, and app infrastructure services under strict data processing agreements</li>
+            <li><strong>Apple:</strong> Subscription processing and in-app purchase management (Apple does not share your financial information with us)</li>
             <li><strong>Legal Requirements:</strong> When required by law or to protect rights and safety</li>
             <li><strong>With Your Consent:</strong> Only when you explicitly authorize sharing</li>
         </ul>
@@ -612,6 +615,25 @@
         
         <p><strong>International Data Transfers:</strong></p>
         <p>Your data may be transferred to servers in the United States. We ensure appropriate safeguards are in place, including standard contractual clauses with our service providers.</p>
+        
+        <h2>Subscription & Payment Information</h2>
+        
+        <p><strong>What we collect:</strong></p>
+        <ul>
+            <li>Subscription status (free or premium tier)</li>
+            <li>Subscription type (weekly, monthly, or annual)</li>
+            <li>Subscription start and renewal dates</li>
+            <li>Transaction identifiers from Apple</li>
+        </ul>
+        
+        <p><strong>What we DON'T collect:</strong></p>
+        <ul>
+            <li>Credit card numbers or payment details</li>
+            <li>Bank account information</li>
+            <li>Apple ID password or payment credentials</li>
+        </ul>
+        
+        <p>All payment processing is handled securely by Apple through the App Store. We only receive confirmation of successful transactions and subscription status updates.</p>
         
         <h2>Data Security</h2>
         
@@ -692,6 +714,7 @@
                 <h3>Legal</h3>
                 <a href="/privacy.html">Privacy Policy</a>
                 <a href="/terms.html">Terms of Service</a>
+                <a href="/subscription-terms.html">Subscription Terms</a>
             </div>
             <div class="footer-section">
                 <h3>Connect</h3>

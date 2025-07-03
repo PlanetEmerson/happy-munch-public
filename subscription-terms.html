@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Terms | Happy Munch Premium</title>
+    <meta name="description" content="Happy Munch subscription terms, pricing, auto-renewal, and cancellation policy. Clear information about Happy Munch Premium features and billing.">
+    <meta name="keywords" content="Happy Munch subscription, premium features, auto-renewal, cancellation policy, subscription pricing, in-app purchase">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://happy-munch.com/subscription-terms.html">
+    <meta property="og:title" content="Subscription Terms - Happy Munch Premium">
+    <meta property="og:description" content="Clear subscription terms for Happy Munch Premium. Pricing, features, auto-renewal, and cancellation information.">
+    <meta property="og:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://happy-munch.com/subscription-terms.html">
+    <meta property="twitter:title" content="Subscription Terms - Happy Munch Premium">
+    <meta property="twitter:description" content="Clear subscription terms for Happy Munch Premium. Pricing, features, auto-renewal, and cancellation information.">
+    <meta property="twitter:image" content="https://happy-munch.com/social-share.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/happy_munch_foreground.png">
+    <link rel="apple-touch-icon" href="/assets/happy_munch_foreground.png">
+    
+    <style>
+        /* Include same styles as other pages */
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Geist';
+            src: url('assets/Geist-v1.4.01/webfonts/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --orange: #FF6B35;
+            --orange-light: #FF8C5A;
+            --orange-dark: #E55A2B;
+            --blue: #2196F3;
+            --green: #4CAF50;
+            --yellow: #FFC107;
+            --red: #FF5252;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --bg-light: #f8f9fb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
+        body {
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        nav {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--orange);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pricing-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--orange);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            margin-top: 0;
+            color: var(--orange);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin: 1rem 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .features-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
+        }
+        
+        .important-box {
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+            border: 2px solid #91d5ff;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .important-box h3 {
+            color: #096dd9;
+            margin-top: 0;
+        }
+        
+        .important-box p, .important-box li {
+            color: #0050b3;
+        }
+        
+        .cancellation-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #f8fffa 100%);
+            border: 2px solid #86efac;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .cancellation-box h3 {
+            color: #16a34a;
+            margin-top: 0;
+        }
+        
+        .cancellation-box p, .cancellation-box li {
+            color: #15803d;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+        
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 5rem 1rem 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/adaptive-icon1.png" alt="Happy Munch">
+                Happy Munch
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <a href="/terms.html" class="back-link">← Back to Terms of Service</a>
+        
+        <h1><span class="gradient-text">Happy Munch Premium</span> Subscription Terms</h1>
+        <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 500;">Clear, transparent pricing for your AI-powered dining companion</p>
+        
+        <h2>Subscription Plans & Pricing</h2>
+        
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Weekly Premium</h3>
+                <div class="price">$2.99 <span>/week</span></div>
+                <ul class="features-list">
+                    <li>Unlimited meal analyses</li>
+                    <li>AI-powered recommendations</li>
+                    <li>Full meal history</li>
+                    <li>All dietary filters</li>
+                    <li>Priority support</li>
+                </ul>
+                <p style="font-size: 0.875rem; margin-top: 1rem;">Perfect for trying out Premium features</p>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Monthly Premium</h3>
+                <div class="price">$6.99 <span>/month</span></div>
+                <ul class="features-list">
+                    <li>Unlimited meal analyses</li>
+                    <li>AI-powered recommendations</li>
+                    <li>Full meal history</li>
+                    <li>All dietary filters</li>
+                    <li>Priority support</li>
+                    <li><strong>Save 42% vs weekly</strong></li>
+                </ul>
+                <p style="font-size: 0.875rem; margin-top: 1rem;">Best value for regular users</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Annual Premium</h3>
+                <div class="price">$39.99 <span>/year</span></div>
+                <ul class="features-list">
+                    <li>Unlimited meal analyses</li>
+                    <li>AI-powered recommendations</li>
+                    <li>Full meal history</li>
+                    <li>All dietary filters</li>
+                    <li>Priority support</li>
+                    <li><strong>Save 52% vs monthly</strong></li>
+                </ul>
+                <p style="font-size: 0.875rem; margin-top: 1rem;">Maximum savings for committed users</p>
+            </div>
+        </div>
+        
+        <div class="important-box">
+            <h3>📱 Important Subscription Information</h3>
+            <p><strong>Payment & Billing:</strong></p>
+            <ul>
+                <li>Payment will be charged to your Apple ID account at confirmation of purchase</li>
+                <li>Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period</li>
+                <li>Account will be charged for renewal within 24-hours prior to the end of the current period</li>
+                <li>The renewal charge will be the same as your original subscription price</li>
+            </ul>
+        </div>
+        
+        <h2>Free Tier Information</h2>
+        <p>Happy Munch offers a free tier with the following limitations:</p>
+        <ul>
+            <li><strong>3 free meal analyses per month</strong> - Perfect for occasional use</li>
+            <li>Monthly limit resets on the same day each month you first signed up</li>
+            <li>Access to basic features and recommendations</li>
+            <li>Upgrade anytime to unlock unlimited analyses</li>
+        </ul>
+        
+        <h2>Premium Features</h2>
+        <p>With Happy Munch Premium, you get:</p>
+        <ul>
+            <li><strong>Unlimited Meal Analyses:</strong> Scan as many menus as you want, whenever you want</li>
+            <li><strong>Complete Meal History:</strong> Access your full dining history and track patterns</li>
+            <li><strong>Advanced AI Recommendations:</strong> Get personalized suggestions based on your preferences and goals</li>
+            <li><strong>All Dietary Filters:</strong> Apply multiple dietary restrictions and preferences simultaneously</li>
+            <li><strong>Priority Support:</strong> Get help faster when you need it</li>
+            <li><strong>New Features First:</strong> Be the first to access new features as we release them</li>
+        </ul>
+        
+        <div class="cancellation-box">
+            <h3>🔄 Easy Cancellation</h3>
+            <p><strong>How to Cancel Your Subscription:</strong></p>
+            <ol>
+                <li>Open the Settings app on your iPhone or iPad</li>
+                <li>Tap your name at the top</li>
+                <li>Tap "Subscriptions"</li>
+                <li>Select "Happy Munch Premium"</li>
+                <li>Tap "Cancel Subscription"</li>
+            </ol>
+            <p><strong>What happens when you cancel:</strong></p>
+            <ul>
+                <li>You'll continue to have Premium access until the end of your current billing period</li>
+                <li>Your subscription won't auto-renew</li>
+                <li>You can resubscribe anytime to regain Premium features</li>
+                <li>Your data and meal history are preserved</li>
+            </ul>
+        </div>
+        
+        <h2>Managing Your Subscription</h2>
+        <p>You can manage your subscription directly through your Apple ID:</p>
+        <ul>
+            <li><strong>View subscription status:</strong> Settings > [Your Name] > Subscriptions</li>
+            <li><strong>Change subscription tier:</strong> Select a different plan in your subscription settings</li>
+            <li><strong>Update payment method:</strong> Settings > [Your Name] > Payment & Shipping</li>
+            <li><strong>Turn off auto-renewal:</strong> Toggle off in your subscription settings</li>
+        </ul>
+        
+        <h2>Refund Policy</h2>
+        <p>All subscription purchases are handled through Apple's App Store. For refund requests:</p>
+        <ul>
+            <li>Visit <a href="https://reportaproblem.apple.com" style="color: var(--orange);">reportaproblem.apple.com</a></li>
+            <li>Sign in with your Apple ID</li>
+            <li>Find your Happy Munch purchase</li>
+            <li>Select "Report a Problem" and follow the prompts</li>
+        </ul>
+        <p>Apple's refund policies apply to all subscription purchases.</p>
+        
+        <h2>Price Changes</h2>
+        <p>If we change subscription prices:</p>
+        <ul>
+            <li>Existing subscribers will be notified at least 30 days in advance</li>
+            <li>You'll have the option to accept the new price or cancel</li>
+            <li>Price increases require your consent through the App Store</li>
+            <li>Your current price is locked in until you accept any increase</li>
+        </ul>
+        
+        <h2>Family Sharing</h2>
+        <p>Happy Munch Premium subscriptions support Family Sharing when available:</p>
+        <ul>
+            <li>Share your subscription with up to 5 family members</li>
+            <li>Each family member gets their own account and personalized experience</li>
+            <li>Privacy is maintained - meal histories and preferences are not shared</li>
+            <li>Set up through Settings > [Your Name] > Family Sharing</li>
+        </ul>
+        
+        <h2>Free Trial Information</h2>
+        <p>When we offer free trials:</p>
+        <ul>
+            <li>New users may be eligible for a free trial period</li>
+            <li>Free trial length and availability varies by promotion</li>
+            <li>You won't be charged during the free trial period</li>
+            <li>Cancel anytime during the trial to avoid charges</li>
+            <li>If you don't cancel, you'll be automatically charged when the trial ends</li>
+        </ul>
+        
+        <h2>Contact & Support</h2>
+        <p>Have questions about your subscription?</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@happy-munch.com" style="color: var(--orange);">support@happy-munch.com</a></li>
+            <li><strong>In-App:</strong> Profile > Settings > Contact Support</li>
+            <li><strong>Response Time:</strong> Within 24 hours for Premium subscribers</li>
+        </ul>
+        
+        <p style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+            <strong>Last Updated:</strong> January 2025<br>
+            These subscription terms are part of our overall <a href="/terms.html" style="color: var(--orange);">Terms of Service</a>.
+        </p>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="/#features">Features</a>
+                <a href="/#how-it-works">How It Works</a>
+                <a href="/subscription-terms.html">Subscription Terms</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="/support.html">Help Center</a>
+                <a href="/support.html#contact">Contact Us</a>
+                <a href="/data-deletion.html">Delete My Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+                <a href="/subscription-terms.html">Subscription Terms</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:contact@happy-munch.com">contact@happy-munch.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Happy Munch. All rights reserved. Made with 🧡 for the developer's mom. Who finally now knows what the f#&% to eat.</p>
+        </div>
+    </footer>
+</body>
+</html>
