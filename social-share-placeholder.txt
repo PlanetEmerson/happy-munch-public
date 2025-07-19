@@ -1,0 +1,31 @@
+SOCIAL SHARE IMAGE NEEDED
+========================
+
+The website references a social share image at:
+/social-share.png or /assets/social-share.png
+
+This image is used for:
+- Open Graph (Facebook) sharing
+- Twitter card image
+- General social media previews
+
+Recommended specifications:
+- Dimensions: 1200x630 pixels (ideal for most platforms)
+- Format: PNG or JPG
+- Content: Should include Happy Munch logo, app name, and tagline
+- Text overlay: "Snap, Tap, Eat - Happy Munch"
+- Subtitle: "We Tell You What to Eat!"
+
+To implement:
+1. Create the image with the above specifications
+2. Save as social-share.png in the root directory or assets folder
+3. Update all meta tags if you place it in a different location
+
+Current references in:
+- index.html
+- privacy.html
+- support.html
+- terms.html
+- delete-data.html
+- allergy-safety-guide.html
+- subscription-terms.html
