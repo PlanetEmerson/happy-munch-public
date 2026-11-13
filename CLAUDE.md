@@ -34,3 +34,8 @@ Since this is a static site, there are no build commands. Development workflow:
 - System fonts for performance
 - Mobile-first responsive design
 - All styles are inline within each HTML file
+
+## Worktree & build hygiene
+- When your task's worktree is merged, or its branch is pushed and has no uncommitted changes, remove it with `git worktree remove <path>` and then `git worktree prune`. Never remove a worktree that has unpushed commits, uncommitted changes, or belongs to another running agent. If you're unsure, leave it and say so.
+- Never delete anything git tracks. Only clean up ignored, regenerable output (node_modules, .next, dist, build, .turbo), and only in the worktree you created.
+- Don't commit build output, and don't leave dev servers or watchers running when you finish.
